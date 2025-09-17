@@ -24,7 +24,7 @@ export default function Categories() {
         >
           {categories.map((c) => (
             <Reveal key={c.id}>
-              <div className="relative h-32 sm:h-40 w-full overflow-hidden rounded-xl border border-[rgba(0,229,255,0.25)]">
+              <div className="relative h-40 sm:h-64 sm:grid-cols-3 md:grid-cols-3 md:grid w-full overflow-hidden rounded-xl border border-[rgba(0,229,255,0.25)]">
                 <Image
                   src={c.image}
                   alt={c.name}
@@ -32,8 +32,8 @@ export default function Categories() {
                   className="object-cover transition-transform duration-500 hover:scale-110"
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-black/60 p-2 sm:p-3">
-                  <p className="font-bold uppercase tracking-wider text-xs sm:text-sm">{c.name}</p>
+                <div className="absolute inset-x-0 bottom-0 bg-black/60 p-2 m:p-3">
+                  <h3 className="font-bold uppercase tracking-wider text-base sm:text-xl md:text-xl lg:text-xl text-center">{c.name}</h3>
                 </div>
               </div>
             </Reveal>

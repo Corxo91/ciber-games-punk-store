@@ -48,7 +48,6 @@ export default function Header() {
           <Image src="/assets/logo.png" alt="Logo" width={72} height={36} priority />
           <span>Wolfs Store</span>
         </Link>
-
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-4 lg:gap-6">
           {links.map((l) => (
