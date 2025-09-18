@@ -1,8 +1,9 @@
+import { CartProvider } from "@/components/Cart";
+import Footer from "@/components/Layout/Footer/Footer";
+import Header from "@/components/Layout/Header/Header";
 import type { Metadata } from "next";
 import { Orbitron, Share_Tech_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Layout/Header/Header";
-import Footer from "@/components/Layout/Footer/Footer";
 
 const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron", display: "swap" });
 const shareTechMono = Share_Tech_Mono({ subsets: ["latin"], weight: "400", variable: "--font-sharetech", display: "swap" });
@@ -20,11 +21,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${orbitron.variable} ${shareTechMono.variable}`} suppressHydrationWarning>
-      <body className="min-h-dvh antialiased" suppressHydrationWarning>
-        <Header />
-        {children}
-        <Footer />
+    <html lang="es" className={`${orbitron.variable} ${shareTechMono.variable}`}>
+      <body className="min-h-dvh antialiased">
+        <CartProvider>
+          <Header />
+            {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
