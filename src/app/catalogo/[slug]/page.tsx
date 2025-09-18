@@ -1,11 +1,11 @@
-import Image from "next/image";
-import { notFound } from "next/navigation";
-import Container from "@/components/Ui/Container/Container";
+import { Categories } from "@/components/ui/badgets";
+import Container from "@/components/ui/container/Container";
+import { GalleryLightbox } from "@/components/ui/ligthbox";
 import { gamesData } from "@/data/home.data";
 import { Metadata } from "next";
+import Image from "next/image";
+import { notFound } from "next/navigation";
 import { AddToCartClient } from "./shared";
-import { Categories } from "@/components/Ui/Badgets";
-import { GalleryLightbox } from "@/components/Ui/Ligthbox";
 
 type Props = { params: { slug: string } };
 

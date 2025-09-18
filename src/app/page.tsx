@@ -1,6 +1,6 @@
-import Categories from "@/components/Home/Categorias/Categorias";
-import Featured from "@/components/Home/Feature/Feature";
-import Hero from "@/components/Home/Hero/Hero";
+import Categories from "@/components/home/categorias/Categorias";
+import Featured from "@/components/home/feature/Feature";
+import Hero from "@/components/home/hero/Hero";
 
 export default function Page() {
   return (

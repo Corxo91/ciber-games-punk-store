@@ -3,7 +3,7 @@ export type HeaderProps = {
   href: string
 }[]
 
-export type gamesProps = {
+export type GamesProps = {
   id: number;
   title: string;
   description: string;
@@ -12,7 +12,8 @@ export type gamesProps = {
   slug: string;
   category: string[];
   images?: string[];
-}[];
+  featured: boolean;
+};
 
 
 export type CategoryProps = { 

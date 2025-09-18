@@ -1,4 +1,4 @@
-import Container from "@/components/Ui/Container/Container";
+import Container from "@/components/ui/container/Container";
 import { footerData } from "@/data/home.data";
 import Link from "next/link";
 

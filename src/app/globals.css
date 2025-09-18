@@ -16,6 +16,17 @@
   --container-6xl: 100%
 }
 
+/* en src/app/globals.css */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(10,10,15,0.8) inset !important;
+  -webkit-text-fill-color: #fff !important;
+  caret-color: #fff !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+
+
 /* ===== Base ===== */
 html { scroll-behavior: smooth; max-width: 100vw; overflow-x: hidden; }
 body {
@@ -104,4 +115,17 @@ a:hover { color: var(--cp-lime); text-shadow: 0 0 12px rgba(0,255,156,0.6); tran
     
 .hero-content {
   max-width: 800px;
+}
+
+/* Quitar spinners de inputs numéricos (Chrome, Edge, Safari) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Quitar spinners (Firefox) */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }

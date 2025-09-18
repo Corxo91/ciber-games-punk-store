@@ -1,6 +1,6 @@
-import { CartProvider } from "@/components/Cart";
-import Footer from "@/components/Layout/Footer/Footer";
-import Header from "@/components/Layout/Header/Header";
+import { CartProvider } from "@/components/cart";
+import Footer from "@/components/layout/footer/Footer";
+import Header from "@/components/layout/header/Header";
 import type { Metadata } from "next";
 import { Orbitron, Share_Tech_Mono } from "next/font/google";
 import "./globals.css";

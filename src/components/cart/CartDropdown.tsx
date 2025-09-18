@@ -1,6 +1,6 @@
 "use client";
 
-import { useCart } from "@/components/Cart/CartProvider";
+import { useCart } from "@/components/cart/CartProvider";
 import { useClickOutside } from "@/hooks/useClickOutside";
 import { AnimatePresence, cubicBezier, motion } from "framer-motion";
 import Image from "next/image";

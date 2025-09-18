@@ -1,6 +1,6 @@
 "use client";
 
-import { useCart } from "@/components/Cart/CartProvider";
+import { useCart } from "@/components/cart/CartProvider";
 import { motion } from "framer-motion";
 import { FaShoppingCart } from "react-icons/fa";
 import { useEffect, useState } from "react";

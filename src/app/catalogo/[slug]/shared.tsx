@@ -1,5 +1,5 @@
 "use client";
-import { useCart } from "@/components/Cart/CartProvider";
+import { useCart } from "@/components/cart/CartProvider";
 
 export function AddToCartClient({ game }: { game: { id: number; title: string; price: number; image: string; slug: string } }) {
   const { add } = useCart();

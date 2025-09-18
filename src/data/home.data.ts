@@ -1,14 +1,14 @@
-import {HeaderProps, gamesProps, CategoryProps, FooterProps} from '@/types/home.types'
+import {HeaderProps, GamesProps, CategoryProps, FooterProps} from '@/types/home.types'
 
 export const headerData: HeaderProps = [
   {label: "Inicio", href: "/"},
   { label: "Destacados", href: "/#fullgame" },
   { label: "Categorias", href: "/#category" },
-  { label: "Catalogo", href: "/"},
+  { label: "Catalogo", href: "/catalogo/"},
   { label: "Ayuda", href: "/" },
 ]
 
-export const gamesData: gamesProps = [
+export const gamesData: GamesProps[] = [
   {
     id: 1,
     title: 'Cyberpunk 2077',
@@ -21,7 +21,8 @@ export const gamesData: gamesProps = [
       '/assets/games-images/cyberpunk1.jpeg',
       '/assets/games-images/cyberpunk2.jpeg',
       '/assets/games-images/cyberpunk3.jpeg',
-      ]
+      ],
+    featured: false
     },
     {
       id: 2,
@@ -35,7 +36,8 @@ export const gamesData: gamesProps = [
       '/assets/games-images/fc251.jpeg',
       '/assets/games-images/fc252.jpeg',
       '/assets/games-images/fc253.jpeg',
-      ]
+      ],
+    featured: false
   },
   {
     id: 3,
@@ -49,7 +51,8 @@ export const gamesData: gamesProps = [
       '/assets/games-images/acv1.jpeg',
       '/assets/games-images/acv2.jpeg',
       '/assets/games-images/acv3.jpeg',
-      ]
+      ],
+    featured: true
   },
   {
     id: 4,
@@ -63,7 +66,8 @@ export const gamesData: gamesProps = [
       '/assets/games-images/elden1.jpeg',
       '/assets/games-images/elden2.jpeg',
       '/assets/games-images/elden3.jpeg',
-      ]
+      ],
+    featured: true
   },
   {
     id: 5,
@@ -77,7 +81,8 @@ export const gamesData: gamesProps = [
       '/assets/games-images/fc61.jpeg',
       '/assets/games-images/fc62.jpeg',
       '/assets/games-images/fc63.jpeg',
-      ]
+      ],
+    featured: false
   },
   {
     id: 6,
@@ -91,7 +96,8 @@ export const gamesData: gamesProps = [
       '/assets/games-images/rdr21.jpeg',
       '/assets/games-images/rdr22.jpeg',
       '/assets/games-images/rdr23.jpeg',
-      ]
+      ],
+    featured: true
   },
   {
     id: 7,
@@ -105,7 +111,38 @@ export const gamesData: gamesProps = [
       '/assets/games-images/sekiro1.jpeg',
       '/assets/games-images/sekiro2.jpeg',
       '/assets/games-images/sekiro3.jpeg',
-      ]
+      ],
+    featured: false
+  },
+  {
+    id: 8,
+    title: 'Sekiro: Shadows Die Twice',
+    description: 'Adéntrate en un mundo de fantasía oscura y desafiante en Sekiro: Shadows Die Twice. Juega como un shinobi en busca de venganza en un Japón feudal lleno de peligros y enemigos formidables. Utiliza un sistema de combate preciso y estratégico que combina habilidades de sigilo, exploración y enfrentamientos épicos. Con una narrativa rica y un diseño de mundo interconectado, Sekiro ofrece una experiencia única que desafiará tus habilidades y te sumergirá en su atmósfera cautivadora.',
+    image: '/assets/games-images/sekiro.jpeg',
+    price: 51.99,
+    slug:'sekiro-shadows-die-twice',
+    category: ['Moba'],
+    images: [
+      '/assets/games-images/sekiro1.jpeg',
+      '/assets/games-images/sekiro2.jpeg',
+      '/assets/games-images/sekiro3.jpeg',
+      ],
+    featured: false
+  },
+  {
+    id: 9,
+    title: 'Sekiro: Shadows Die Twice',
+    description: 'Adéntrate en un mundo de fantasía oscura y desafiante en Sekiro: Shadows Die Twice. Juega como un shinobi en busca de venganza en un Japón feudal lleno de peligros y enemigos formidables. Utiliza un sistema de combate preciso y estratégico que combina habilidades de sigilo, exploración y enfrentamientos épicos. Con una narrativa rica y un diseño de mundo interconectado, Sekiro ofrece una experiencia única que desafiará tus habilidades y te sumergirá en su atmósfera cautivadora.',
+    image: '/assets/games-images/sekiro.jpeg',
+    price: 51.99,
+    slug:'sekiro-shadows-die-twice',
+    category: ['Estrategia'],
+    images: [
+      '/assets/games-images/sekiro1.jpeg',
+      '/assets/games-images/sekiro2.jpeg',
+      '/assets/games-images/sekiro3.jpeg',
+      ],
+    featured: false
   }
 ]
 

@@ -1,15 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import Container from "@/components/Ui/Container/Container";
-import { FaBolt, FaBars, FaTimes } from "react-icons/fa";
-import { motion, AnimatePresence, cubicBezier, Variants } from "framer-motion";
-import Reveal from "@/components/Ui/Reveal/Reveal";
+import CartButton from "@/components/cart/CartButton";
+import CartDropdown from "@/components/cart/CartDropdown";
+import Container from "@/components/ui/container/Container";
+import Reveal from "@/components/ui/reveal/Reveal";
 import { headerData } from "@/data/home.data";
-import CartButton from "@/components/Cart/CartButton";
-import CartDropdown from "@/components/Cart/CartDropdown";
+import { AnimatePresence, cubicBezier, motion, Variants } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { FaBars, FaBolt, FaTimes } from "react-icons/fa";
 
 const links = headerData;
 const easeCyber = cubicBezier(0.2, 0.65, 0.3, 0.9);
@@ -29,7 +29,7 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-[rgba(0,229,255,0.2)] bg-[rgba(10,10,15,0.7)] backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-[rgba(0,229,255,0.2)] bg-[rgba(10,10,15,0.7)] backdrop-blur-md" id="site-header">
       <Reveal>
         <Container className="h-16">
           {/* Flex en una sola línea, centrado vertical/horizontal */}

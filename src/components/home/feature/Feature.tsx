@@ -1,12 +1,13 @@
 "use client";
 
-import Container from "@/components/Ui/Container/Container";
-import NeonTitle from "@/components/Ui/NeonTitle/NeonTitle";
-import Reveal from "@/components/Ui/Reveal/Reveal";
+import { useMemo } from "react"; // ← NUEVO
+import { useCart } from "@/components/cart/CartProvider";
+import Container from "@/components/ui/container/Container";
+import NeonTitle from "@/components/ui/neonTitle/NeonTitle";
+import Reveal from "@/components/ui/reveal/Reveal";
 import { gamesData } from "@/data/home.data";
 import Image from "next/image";
 import Link from "next/link";
-import { useCart } from "@/components/Cart/CartProvider";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -15,6 +16,9 @@ import { A11y, Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Featured() {
+  // ← SOLO DESTACADOS
+  const featuredGames = useMemo(() => gamesData.filter((g) => g.featured === true), []);
+
   return (
     <section className="py-12 sm:py-14 lg:py-16">
       <Container>
@@ -41,7 +45,7 @@ export default function Featured() {
               className="!pb-10"
               loop
             >
-              {gamesData.map((p) => (
+              {featuredGames.map((p) => (  // ← AQUÍ EL CAMBIO
                 <SwiperSlide key={p.id} className="!h-auto">
                   <article className="cp-card overflow-hidden h-[450px] sm:h-[460px] lg:h-[500px] flex flex-col">
                     <Link href={`/catalogo/${p.slug}`} className="block">
@@ -61,8 +65,6 @@ export default function Featured() {
                     <div className="p-4 sm:p-5 flex flex-col flex-1">
                       <Link href={`/catalogo/${p.slug}`} className="block">
                         <h3 className="text-3xl line-clamp-3 sm:text-2xl px-3 font-bold text-center">{p.title}</h3>
-                      
-
                         <p className="cp-paragraph mt-2 px-6 text-center text-xl line-clamp-3">
                           {p.description}
                         </p>
