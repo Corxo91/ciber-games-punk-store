@@ -56,7 +56,7 @@ export function GalleryLightbox({ images }: { images: string[] }) {
                   aria-label={`Ver imagen ${i + 1}`}
                 >
                   <Image
-                    src={src}
+                    src={`${prefix}/${src}`}
                     alt={`Imagen ${i + 1}`}
                     fill
                     className="object-fill"

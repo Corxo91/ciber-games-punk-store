@@ -8,12 +8,12 @@ import Reveal from "@/components/ui/reveal/Reveal";
 import { gamesData } from "@/data/home.data";
 import Image from "next/image";
 import Link from "next/link";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { A11y, Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { prefix } from "@/lib/prefix";
 
 export default function Featured() {
   // ← SOLO DESTACADOS
@@ -50,7 +50,7 @@ export default function Featured() {
                     <Link href={`/catalogo/${p.slug}`} className="block">
                       <div className="relative h-40 sm:h-48 lg:h-56 w-full">
                         <Image
-                          src={p.image}
+                          src={`${prefix}/${p.image}`}
                           alt={p.title}
                           fill
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"

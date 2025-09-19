@@ -5,6 +5,7 @@ import CartDropdown from "@/components/cart/CartDropdown";
 import Container from "@/components/ui/container/Container";
 import Reveal from "@/components/ui/reveal/Reveal";
 import { headerData } from "@/data/home.data";
+import { prefix } from "@/lib/prefix";
 import { AnimatePresence, cubicBezier, motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -50,7 +51,7 @@ export default function Header() {
                 className="hidden md:flex items-center gap-2 text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold degradedBlue cp-glow"
               >
                 <FaBolt className="cp-glow" />
-                <Image src="/assets/logo.png" alt="Logo" width={72} height={36} priority />
+                <Image src={`${prefix}/assets/logo.png`} alt="Logo" width={72} height={36} priority />
                 <span>Wolfs Store</span>
               </Link>
             </div>
@@ -59,7 +60,7 @@ export default function Header() {
             <div className="flex items-center justify-center">
               <Link href="/" className="md:hidden flex items-center gap-2 text-2xl font-bold degradedBlue cp-glow">
                 <FaBolt className="cp-glow" />
-                <Image src="/assets/logo.png" alt="Logo" width={56} height={28} />
+                <Image src={`${prefix}/assets/logo.png`} alt="Logo" width={56} height={28} />
                 <span>Wolfs</span>
               </Link>
 

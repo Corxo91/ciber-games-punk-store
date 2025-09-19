@@ -11,6 +11,7 @@ import { gamesData } from "@/data/home.data";
 import { filterGames } from "@/lib/searchUtils";
 import { GamesProps as Game } from "@/types/home.types";
 import Image from "next/image";
+import { prefix } from "@/lib/prefix";
 
 const ease = cubicBezier(0.2, 0.65, 0.3, 0.9);
 
@@ -119,7 +120,7 @@ export default function Hero() {
                       >
                         <div className="relative h-24 w-24 overflow-hidden rounded border border-[rgba(0,229,255,0.25)]">
                           <Image
-                            src={g.image}
+                            src={`${prefix}/${g.image}`}
                             alt={g.title}
                             width={96}
                             height={96}

@@ -4,6 +4,7 @@ import NeonTitle from "@/components/ui/neonTitle/NeonTitle";
 import Reveal from "@/components/ui/reveal/Reveal";
 import { categoriesData } from "@/data/home.data";
 import { staggerContainer } from "@/lib/motion";
+import { prefix } from "@/lib/prefix";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -29,7 +30,7 @@ export default function Categories() {
                 className="group block relative h-40 sm:h-64 w-full overflow-hidden rounded-xl border border-[rgba(0,229,255,0.25)] focus:outline-none"
               >
                 <Image
-                  src={c.image}
+                  src={`${prefix}/${c.image}`}
                   alt={c.name}
                   fill
                   className="object-fill transition-transform duration-500 group-hover:scale-110"
