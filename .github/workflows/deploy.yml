@@ -37,8 +37,6 @@ jobs:
           NEXT_PUBLIC_REPO_NAME: 'ciber-games-punk-store'
         run: |
           yarn build
-          # GitHub Pages + Next export necesitan esto para permitir /_next/*
-          touch out/.nojekyll
 
       - name: Upload artifact (./out)
         uses: actions/upload-pages-artifact@v3
