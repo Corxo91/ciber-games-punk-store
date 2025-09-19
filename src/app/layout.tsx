@@ -4,6 +4,7 @@ import Header from "@/components/layout/header/Header";
 import type { Metadata } from "next";
 import { Orbitron, Share_Tech_Mono } from "next/font/google";
 import "./globals.css";
+import { prefix } from "@/lib/prefix";
 
 const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron", display: "swap" });
 const shareTechMono = Share_Tech_Mono({ subsets: ["latin"], weight: "400", variable: "--font-sharetech", display: "swap" });
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   description: "Todos los videojuegos al alcance de todos.",
   metadataBase: new URL(base?.startsWith("http") ? base : "http://localhost:3000"),
   icons: {
-    icon: [{ url: "/icons/favicon.png", type: "image/png", sizes: "32x32" }],
+    icon: [{ url: `${prefix}/icons/favicon.png`, type: "image/png", sizes: "32x32" }],
   },
 };
 
