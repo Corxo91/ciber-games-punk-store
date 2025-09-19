@@ -1,55 +1,38 @@
-name: Deploy Next.js to GitHub Pages
-
+# .github/workflows/deploy-pages.yml
+name: Deploy Next.js (Yarn) to GitHub Pages - Project
 on:
-  push:
-    branches: [ main ]
+  push: { branches: [ "main" ] }
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
-  group: "pages"
+  group: "cyber-games-punk-store"
   cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'yarn'
-
-      - name: Install deps
-        run: yarn install --frozen-lockfile
-
-      - name: Build & Export static
-        env:
-          NEXT_TELEMETRY_DISABLED: '1'
-          # 👇 Ajusta el repo; esto define basePath/assetPrefix en next.config.mjs
-          NEXT_PUBLIC_REPO_NAME: 'ciber-games-punk-store'
-        run: |
+          node-version: "20"
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
+      - run: |
           yarn build
-
-      - name: Upload artifact (./out)
-        uses: actions/upload-pages-artifact@v3
+          yarn next export
+          touch out/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
-
   deploy:
     needs: build
     runs-on: ubuntu-latest
     environment:
-      name: portafolio
+      name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
