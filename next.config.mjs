@@ -3,9 +3,9 @@
 const isProd = process.env.NEXT_PUBLIC_REPO_NAME === 'production'; 
 
 const nextConfig = {
-  utput: "export",                 
-  basePath: isProd ? "/cpa-bank-project" : "", 
-  assetPrefix: isProd ? "/cpa-bank-project/" : "",                                              
+  output: "export",                 
+  basePath: isProd ? "/ciber-games-punk-store" : "", 
+  assetPrefix: isProd ? "/ciber-games-punk-store/" : "",                                              
   trailingSlash: true,               
   reactStrictMode: true,          
   images: {
@@ -14,6 +14,7 @@ const nextConfig = {
       { protocol: "https", hostname: "images.unsplash.com" }, 
     ],
   },
+
 };
 
 export default nextConfig;
