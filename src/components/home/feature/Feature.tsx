@@ -28,7 +28,7 @@ export default function Featured() {
         </Reveal>
 
         <Reveal>
-          <div className="w-full mx-auto px-4 sm:px-6 md:px-2 lg:px-8 md:max-w-[95vw] xl:max-w-[1200px] 2xl:max-w-[1400px]">
+          <div className="w-full mx-auto md:max-w-[100vw] xl:max-w-[1200px] 2xl:max-w-[1600px]">
             <Swiper
               modules={[Navigation, Pagination, A11y, Keyboard]}
               navigation
@@ -40,7 +40,6 @@ export default function Featured() {
                 0:    { slidesPerView: 1, spaceBetween: 12 },
                 640:  { slidesPerView: 2, spaceBetween: 14 },
                 1024: { slidesPerView: 4, spaceBetween: 16 },
-                1440: { slidesPerView: 5, spaceBetween: 16 },
               }}
               className="!pb-10"
               loop
