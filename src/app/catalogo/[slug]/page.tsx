@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { AddToCartClient } from "./shared";
+import { prefix } from "@/lib/prefix";
 
 type Props = { params: { slug: string } };
 
@@ -32,7 +33,7 @@ export default function GamePage({ params }: Props) {
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Portada */}
           <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-[rgba(0,229,255,0.25)]">
-            <Image src={game.image} alt={game.title} fill className="object-fill" />
+            <Image src={`${prefix}/${game.image}`} alt={game.title} fill className="object-fill" />
           </div>
 
           {/* Info */}
