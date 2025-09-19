@@ -9,6 +9,7 @@ import { FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Keyboard } from "swiper/modules";
 import "swiper/css";
+import { prefix } from "@/lib/prefix";
 
 const ease = cubicBezier(0.2, 0.65, 0.3, 0.9);
 
@@ -90,7 +91,7 @@ export function GalleryLightbox({ images }: { images: string[] }) {
               <div className="relative w-full max-w-5xl aspect-[16/9] rounded-2xl overflow-hidden border border-[rgba(0,229,255,0.35)] bg-black">
                 <Image
                   key={images[idx]}
-                  src={images[idx]}
+                  src={`${prefix}/${images[idx]}`}
                   alt={`Imagen ${idx + 1}`}
                   fill
                   className="object-contain"
