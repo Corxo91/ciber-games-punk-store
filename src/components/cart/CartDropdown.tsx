@@ -65,7 +65,7 @@ export default function CartDropdown() {
                 {items.map(it => (
                   <li key={it.id} className="flex gap-3 items-center">
                     <div className="relative h-20 w-24 shrink-0 overflow-hidden rounded border border-[rgba(0,229,255,0.25)]">
-                      <Image src={`${prefix}/${it.image}`} alt={it.title} fill className="object-fill" />
+                      <Image src={`${prefix}${it.image}`} alt={it.title} fill className="object-fill" />
                     </div>
                     <div className="flex-1">
                       <p className="text-xl font-semibold line-clamp-1">{it.title}</p>

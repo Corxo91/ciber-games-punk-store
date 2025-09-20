@@ -39,7 +39,6 @@ export default function Hero() {
     };
   }, []);
 
-  // Cerrar con ESC (manteniendo el término)
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") setOpen(false);
@@ -120,7 +119,7 @@ export default function Hero() {
                       >
                         <div className="relative h-24 w-24 overflow-hidden rounded border border-[rgba(0,229,255,0.25)]">
                           <Image
-                            src={`${prefix}/${g.image}`}
+                            src={`${prefix}${g.image}`}
                             alt={g.title}
                             width={96}
                             height={96}

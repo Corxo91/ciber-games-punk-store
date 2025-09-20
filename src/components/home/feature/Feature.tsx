@@ -50,7 +50,7 @@ export default function Featured() {
                     <Link href={`/catalogo/${p.slug}`} className="block">
                       <div className="relative h-40 sm:h-48 lg:h-56 w-full">
                         <Image
-                          src={`${prefix}/${p.image}`}
+                          src={`${prefix}${p.image}`}
                           alt={p.title}
                           fill
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"

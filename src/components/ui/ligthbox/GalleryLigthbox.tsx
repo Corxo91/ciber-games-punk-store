@@ -1,15 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { AnimatePresence, cubicBezier, motion } from "framer-motion";
 import Image from "next/image";
-import { motion, AnimatePresence, cubicBezier } from "framer-motion";
-import { FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
 
 // Swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import { A11y, Keyboard } from "swiper/modules";
-import "swiper/css";
 import { prefix } from "@/lib/prefix";
+import "swiper/css";
+import { A11y, Keyboard } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const ease = cubicBezier(0.2, 0.65, 0.3, 0.9);
 
@@ -56,7 +56,7 @@ export function GalleryLightbox({ images }: { images: string[] }) {
                   aria-label={`Ver imagen ${i + 1}`}
                 >
                   <Image
-                    src={`${prefix}/${src}`}
+                    src={`${prefix}${src}`}
                     alt={`Imagen ${i + 1}`}
                     fill
                     className="object-fill"
@@ -91,7 +91,7 @@ export function GalleryLightbox({ images }: { images: string[] }) {
               <div className="relative w-full max-w-5xl aspect-[16/9] rounded-2xl overflow-hidden border border-[rgba(0,229,255,0.35)] bg-black">
                 <Image
                   key={images[idx]}
-                  src={`${prefix}/${images[idx]}`}
+                  src={`${prefix}${images[idx]}`}
                   alt={`Imagen ${idx + 1}`}
                   fill
                   className="object-contain"

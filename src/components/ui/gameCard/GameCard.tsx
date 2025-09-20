@@ -1,10 +1,10 @@
 "use client";
 
+import { useCart } from "@/components/cart/CartProvider";
+import { prefix } from "@/lib/prefix";
+import { GamesProps as Game } from "@/types/home.types";
 import Image from "next/image";
 import Link from "next/link";
-import { useCart } from "@/components/cart/CartProvider";
-import { GamesProps as Game } from "@/types/home.types";
-import { prefix } from "@/lib/prefix";
 
 
 export default function GameCardFeatured({ game }: { game: Game }) {
@@ -14,7 +14,7 @@ export default function GameCardFeatured({ game }: { game: Game }) {
       <Link href={`/catalogo/${game.slug}`} className="block">
         <div className="relative h-40 sm:h-48 lg:h-56 w-full">
           <Image
-            src={`${prefix}/${game.image}`}
+            src={`${prefix}${game.image}`}
             alt={game.title}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"

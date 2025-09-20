@@ -30,7 +30,7 @@ export default function Categories() {
                 className="group block relative h-40 sm:h-64 w-full overflow-hidden rounded-xl border border-[rgba(0,229,255,0.25)] focus:outline-none"
               >
                 <Image
-                  src={`${prefix}/${c.image}`}
+                  src={`${prefix}${c.image}`}
                   alt={c.name}
                   fill
                   className="object-fill transition-transform duration-500 group-hover:scale-110"
