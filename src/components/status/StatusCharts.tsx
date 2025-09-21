@@ -71,7 +71,7 @@ export default function StatusCharts() {
               width={30}
               stroke={palette.axis}
             />
-            <Tooltip content={<CustomTooltip />} />
+            <Tooltip content={<CustomTooltip active={true} payload={uptimeData} label={<span>Uptime semanal</span>} />} />
             <Legend />
             <ReferenceLine yAxisId="left" y={99.9} stroke={palette.lime} strokeDasharray="4 4" />
             <Line
@@ -105,7 +105,7 @@ export default function StatusCharts() {
             <CartesianGrid stroke={palette.grid} strokeDasharray="3 3" />
             <XAxis dataKey="hour" stroke={palette.axis} />
             <YAxis stroke={palette.axis} />
-            <Tooltip content={<CustomTooltip />} />
+            <Tooltip content={<CustomTooltip active={true} payload={responseData} label={<span>Latencia (p50 / p95)</span>} />} />
             <Legend />
             <Bar dataKey="p50" fill={palette.cyan} name="p50" radius={[6, 6, 0, 0]} />
             <Bar dataKey="p95" fill={palette.magenta} name="p95" radius={[6, 6, 0, 0]} />
