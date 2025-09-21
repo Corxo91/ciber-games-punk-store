@@ -6,7 +6,7 @@ const nextConfig = {
   basePath: isProd ? "/ciber-games-punk-store" : "", 
   assetPrefix: isProd ? "/ciber-games-punk-store/" : "",                                              
   trailingSlash: true,               
-  reactStrictMode: true,          
+  reactStrictMode: false,          
   images: {
     unoptimized: true,              
     remotePatterns: [
