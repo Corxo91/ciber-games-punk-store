@@ -2,7 +2,6 @@
 
 import Container from "@/components/ui/container/Container";
 import GameCard from "@/components/ui/gameCard/GameCard";
-import { gamesData } from "@/data/home.data";
 import { filterGames } from "@/lib/searchUtils";
 import { GamesProps as Game } from "@/types/home.types";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -15,6 +14,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { A11y, Keyboard, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { gamesData } from "@/data/games.data";
 
 const easeCyber = cubicBezier(0.2, 0.65, 0.3, 0.9);
 

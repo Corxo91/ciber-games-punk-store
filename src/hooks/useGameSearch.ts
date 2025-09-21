@@ -1,6 +1,6 @@
 "use client";
 import { useMemo, useState } from "react";
-import { gamesData } from "@/data/home.data";
+import { gamesData } from "@/data/games.data";
 
 export function useGameSearch() {
   const [query, setQuery] = useState("");

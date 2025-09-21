@@ -1,17 +1,17 @@
 "use client";
 
 import Container from "@/components/ui/container/Container";
-import NeonButton from "@/components/ui/neonButton/NeonButton";
 import { slideIn, staggerContainer } from "@/lib/motion";
 import { motion, AnimatePresence, cubicBezier } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaBolt, FaSearch } from "react-icons/fa";
 import Link from "next/link";
-import { gamesData } from "@/data/home.data";
 import { filterGames } from "@/lib/searchUtils";
 import { GamesProps as Game } from "@/types/home.types";
 import Image from "next/image";
 import { prefix } from "@/lib/prefix";
+import { gamesData } from "@/data/games.data";
+import { FaGamepad } from "react-icons/fa6";
 
 const ease = cubicBezier(0.2, 0.65, 0.3, 0.9);
 
@@ -50,6 +50,11 @@ export default function Hero() {
   return (
     <section className="relative min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] grid place-items-center">
       <div className="hero pointer-events-none absolute inset-0 h-[500px]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-magenta-500/5" />
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-magenta-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+      </div>
       <Container className="flex flex-col justify-center relative z-10 py-20 sm:py-24 lg:py-28">
         <motion.div
           variants={staggerContainer}
@@ -67,7 +72,14 @@ export default function Hero() {
           </motion.p>
 
           <motion.div variants={slideIn("up")} className="mt-6 sm:mt-8">
-            <NeonButton href="/catalogo" className="text-2xl">Explorar juegos</NeonButton>
+            <Link
+            href="/catalogo"
+            className="cp-button inline-flex items-center gap-3 px-8 py-4 text-lg font-bold bg-gradient-to-r from-[var(--cp-cyan)] to-[var(--cp-magenta)] text-black rounded-xl hover:scale-105 transition-all duration-300"
+          >
+            <FaGamepad />
+            Explorar Catálogo
+            <FaBolt />
+          </Link>
           </motion.div>
 
           {/* Search */}

@@ -1,12 +1,12 @@
 import { Categories } from "@/components/ui/badgets";
 import Container from "@/components/ui/container/Container";
 import { GalleryLightbox } from "@/components/ui/ligthbox";
-import { gamesData } from "@/data/home.data";
 import { prefix } from "@/lib/prefix";
 import { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { AddToCartClient } from "./shared";
+import { gamesData } from "@/data/games.data";
 
 type Props = { params: { slug: string } };
 

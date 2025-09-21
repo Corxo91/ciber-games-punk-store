@@ -5,7 +5,6 @@ import { useCart } from "@/components/cart/CartProvider";
 import Container from "@/components/ui/container/Container";
 import NeonTitle from "@/components/ui/neonTitle/NeonTitle";
 import Reveal from "@/components/ui/reveal/Reveal";
-import { gamesData } from "@/data/home.data";
 import Image from "next/image";
 import Link from "next/link";
 import "swiper/css";
@@ -14,6 +13,7 @@ import "swiper/css/pagination";
 import { A11y, Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { prefix } from "@/lib/prefix";
+import { gamesData } from "@/data/games.data";
 
 export default function Featured() {
   // ← SOLO DESTACADOS
