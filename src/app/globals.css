@@ -97,7 +97,7 @@ a:hover { color: var(--cp-lime); text-shadow: 0 0 12px rgba(0,255,156,0.6); tran
 }
 
 /* Focus ring */
-:focus-visible { outline: 2px dashed var(--cp-yellow); outline-offset: 2px; }
+:focus-visible { outline: none; outline-offset: none; }
 
 /* ===== Secciones específicas ===== */
 .hero {
